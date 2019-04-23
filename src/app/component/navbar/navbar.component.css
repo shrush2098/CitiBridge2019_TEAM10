@@ -1,0 +1,51 @@
+.buttons
+{
+    float: left;
+    width: 105px;
+    height: 49px; 
+}
+
+
+  
+
+.mainname{
+    color: #000000;
+}
+.mainname:hover{
+    color: rgb(34, 30, 30);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #0c0909;
+}
+
+li {
+    float: left;
+    text-align: center;
+}
+
+ul li
+{
+    text-align: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+li a:hover:not(.active) {
+    background-color:white;
+}
+
+.active {
+    background-color: rgb(34, 39, 34);
+}

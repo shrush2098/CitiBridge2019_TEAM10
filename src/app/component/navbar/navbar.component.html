@@ -1,0 +1,41 @@
+
+
+  
+  <br>
+  <div class="separator">
+  <nav class="navbar navbar-expand-md bg-info  ">
+  <a class="navbar-brand mainname" href="#" *ngIf="!authService.loggedIn()"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="nav navbar-nav navbar-left">
+          <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/']"> HOME &emsp;&emsp; </a></li>
+        </ul>
+  
+        
+        <ul class="nav navbar-nav navbar-right">
+        
+              
+              <li class="nav-item" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                <a class="nav-link buttons" [routerLink]="['/dashboard']">Dashboard </a>
+              </li>
+              <li class="nav-item" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                <a class="nav-link buttons" [routerLink]="['/profile']">Profile </a>
+              </li>
+              <li class="nav-item" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                <a class="nav-link buttons" [routerLink]="['/login']">SignIn</a>
+              </li>
+              <li class="nav-item" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                <a class="nav-link buttons" [routerLink]="['/register']">SignUp</a>
+              </li>
+              <li class="nav-item" *ngIf="authService.loggedIn()"><a class="nav-link" (click)="onLogoutClick()" href="#">Logout</a>
+              </li>
+        </ul>
+      </div>
+  </nav>
+  </div>
+  
+  
+  

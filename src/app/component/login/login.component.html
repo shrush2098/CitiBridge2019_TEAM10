@@ -1,0 +1,16 @@
+<h2 *ngIf="!authService.loggedIn()" class="page-header"></h2>
+<h3>User Authetication</h3>
+<form *ngIf="!authService.loggedIn()" (submit)="onLoginSubmit()">
+  <div class="form-group">
+    <label>Username</label>
+    <input type="text" class="form-control" [(ngModel)]="username" name="username">
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" [(ngModel)]="password" name="password">
+  </div>
+  <input type="submit" class="btn btn-primary" value="SignIn">
+</form>
+
+
+

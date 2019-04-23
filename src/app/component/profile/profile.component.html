@@ -1,0 +1,50 @@
+<div *ngIf="user">
+  <br>    <h2 class="page-header">Profile</h2>
+      <ul >
+        <li >Username : {{user.username}}</li>
+        <li >Email : {{user.email}}</li>
+      </ul>
+  </div>
+  <br><br>
+  <br>
+  <button value="Show Recom"  id="show" (click)="showRecom()">Show Recommendations</button> 
+  <br><br><br>
+  <div class="card">
+      <div >
+          <h4 class = "card-title">Recommendations</h4>
+          <table class="table table-hover">
+              <thead>
+                <tr>
+                    <th>DATE</th>
+                    <th>SECTOR</th>
+                    <th>COMPANY</th>
+                    <th>GROWTH %</th>
+                    <th>CLOSE</th>
+                    <th>HIGH</th>
+                    <th>LOW</th>
+                    
+                </tr>
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let recom of recoms">
+                    <tr *ngIf="recom.uname==user.username" >
+                        <td>{{recom.date}}</td>
+                        <td>{{recom.sector}}</td>
+                        <td>{{recom.company}}</td>
+                        <td>{{recom.growth}}</td>
+                        <td>{{recom.close}}</td>
+                        <td>{{recom.high}}</td>
+                        <td>{{recom.low}}</td>
+                        
+                        
+                      </tr>
+                </ng-container>
+                
+              </tbody>
+          </table>
+      </div>
+  </div>
+  
+  
+     
+  

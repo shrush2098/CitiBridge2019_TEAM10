@@ -1,0 +1,49 @@
+<br><br>
+
+<h2 id="head" align="center" >RECOMMENDATIONS </h2>
+<br><br>
+<div id="wrapper">
+<div id="takeSector">
+<div id="horizon">
+<select  [ngModel]="sectors" (ngModelChange)="onChange($event)" name="sel" id="sel" >
+        <option [value]="1" >IT</option>
+        <option [value]="2" >Automobile</option>
+        <option [value]="3" >Cement</option>
+        <option [value]="4" >Construction</option>
+        <option [value]="5" >Consumer Goods</option>
+        <option [value]="6" >Energy</option>
+        <option [value]="7" >Agrochemicals</option>
+        <option [value]="8" >Financial Services</option>
+        <option [value]="9" >Media and Entertainment</option>
+        <option [value]="10" >Metals</option>
+        <option [value]="11" >Pharma</option>
+        <option [value]="12" >Services</option>
+        <option [value]="13" >Telecom</option>
+
+</select>
+<div><input type="submit" (click)="getSelection()" id="sec" value="Select"></div>
+ 
+
+</div>
+</div>
+
+<br><br>
+
+
+   
+
+    <div id="second">
+            
+       
+    </div>
+    
+            
+        <input type="submit" (click)="saveData1()" *ngIf="show[0]" id="savebtn0" value="Save1">
+        <input type="submit" (click)="saveData2()" *ngIf="show[1]" id="savebtn1" value="Save2">
+        <input type="submit" (click)="saveData3()" *ngIf="show[2]" id="savebtn2" value="Save3">
+        <input type="submit" (click)="saveData4()" *ngIf="show[3]" id="savebtn3" value="Save4">
+        <input type="submit" (click)="saveData5()" *ngIf="show[4]" id="savebtn4" value="Save5">
+        
+    
+</div>
+
